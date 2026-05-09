@@ -252,8 +252,12 @@
     grid-template-columns: 250px 250px 250px;
     gap: 20px;
 
-    justify-content: center;
+    justify-self: center;
     margin-bottom: 20px;
+    background: rgba(255, 179, 193, 0.5);
+    border-radius: 25px;
+    padding: 30px;
+
 }
 
 .reseña {
@@ -304,7 +308,7 @@
     text-decoration: none;
     font-weight: bold;
     font-family: "Comic Neue", cursive;
-    box-shadow: 0 4px 15px rgba(255, 224, 227, 0.6);
+    box-shadow: 0 4px 15px gray;
 
     transition: 0.3s;
 }
@@ -312,6 +316,6 @@
 .boton-tres:hover {
     background: #ffb3c1;
     transform: scale(1.1);
-    box-shadow: 0 6px 25px rgba(255, 179, 193, 0.9);
+    box-shadow: 0 6px 25px black;
 }
 /*rgba(90, 76, 65, 0.8)*/
