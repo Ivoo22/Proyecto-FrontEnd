@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    grid-template-rows: 80px 1fr 60px;
+
+    grid-template-areas: 
+        "menu header"
+        "content content"
+        "footer footer";
+    
+    height: 100vh;
+}
+
+.header{
+    grid-area: header;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: white;
+    padding-right: 20px;
+    gap: 15px;
+}
+
+.header img{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 200px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.header svg:hover {
+    background: #ffb3c1;
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(255, 179, 193, 0.9);
+    border-radius: 15px;
+}
+
+.menu {
+    grid-area: menu;
+    background: white;
+    padding: 20px;
+}
+
+.content {
+    display: grid;
+    grid-area: content;
+    background: #ffe0e3; /*#ede8d0*/
+    padding: 20px;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 500px 500px;
+
+    gap: 40px;
+}
+
+.content h2 {
+    display: grid;
+    grid-column: 1 / -1;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Comic Neue", cursive;
+    color: #333;
+    font-weight: bold;
+    font-size: 30px;
+
+}
+
+.publicacion {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.publicacion img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.descripcion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: start ;
+    text-align: center;
+    
+    opacity: 0; /* Ocultar la descripción del producto */
+    transition: 0.3s;
+    transform: translateY(100%);
+}
+
+.descripcion h3 {
+    padding-left: 15px;
+    padding-top: 40px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: oblique;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.descripcion p {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 15px;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.descripcion h4 {
+    padding-left: 15px;
+    margin-top: 40px;
+    font-size: 20px;
+    font-style: oblique;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.publicacion:hover .descripcion{
+    transform: translateY(0);
+    transition: 0.3s;
+    
+    opacity: 1;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.boton {
+    margin-top: 30px;
+    margin-left: 15px;
+    padding: 10px 10px;
+
+    background: lightgray;
+    color: black;
+    
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "Comic Neue", cursive;
+    box-shadow: 0 4px 15px rgba(255, 224, 227, 0.6);
+
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background: #ffb3c1;
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(255, 179, 193, 0.9);
+}
+
+
+.boton-carrito {
+    margin-top: 30px;
+    margin-right: 15px;
+    padding: 10px 10px;
+    
+
+    background: lightgray;
+    color: black;
+    
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "Comic Neue", cursive;
+    box-shadow: 0 4px 15px rgba(255, 224, 227, 0.6);
+
+    transition: 0.3s;
+}
+
+.boton-carrito:hover {
+    background: #ffb3c1;
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(255, 179, 193, 0.9);
+}
+
+.footer {
+    grid-area: footer;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-menu li {
+    overflow: visible;
+    border-radius: 5px;
+}
+
+.flex-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    transition: all 0.2 ease;
+}
+
+.flex-menu a:hover {
+    font-weight: bold;
+    background: #ffb3c1;
+    transform: scale(1.0);
+    box-shadow: 0 6px 25px rgba(255, 179, 193, 0.9);
+    border-radius: 15px;
+}
+/*rgba(90, 76, 65, 0.8)*/
