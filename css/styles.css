@@ -7,11 +7,12 @@
 .layout {
     display: grid;
     grid-template-columns: 350px 1fr;
-    grid-template-rows: 80px 1fr 60px;
+    grid-template-rows: 80px 1fr 1fr 60px;
 
     grid-template-areas: 
         "menu header"
         "content content"
+        "contacto contacto"
         "footer footer";
     
     height: 100vh;
