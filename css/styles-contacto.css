@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .layout {
     display: grid;
     grid-template-columns: 350px 1fr;
@@ -131,20 +135,20 @@
 }
 
 
-.info {
+.informacion {
     display: flex;
     flex-direction: column;
     gap: 15px;
     width: 50%;
 }
 
-.info h4 {
+.informacion h4 {
     font-family: "Comic Neue", cursive;
     margin-bottom: 2px;
     padding-left: 3px;
 }
 
-.info iframe {
+.informacion iframe {
     width: 75%;
     height: 200px;
     border-radius: 15px;
@@ -153,7 +157,7 @@
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-.info p {
+.informacion p {
     font-family: "Comic Neue", cursive;
     padding-left: 3px;
 }
@@ -231,7 +235,6 @@
 
 .menu-lista a {
     padding: 5px;
-    gap: 5px;
     text-decoration: none;
     color: black;
 }
@@ -249,6 +252,11 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
+}
+
+.item-informacion p {
+    font-family: "Comic Neue", cursive;
+    font-size: 13px;
 }
 
 .metodos-de-pago {
