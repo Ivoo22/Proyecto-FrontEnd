@@ -77,7 +77,6 @@ html {
     color: #333;
     font-weight: bold;
     font-size: 30px;
-
 }
 
 .publicacion {
@@ -395,4 +394,105 @@ html {
 
 .redes-sociales i:hover {
     transform: scale(1.2);
+}
+
+@media (max-width: 900px) {
+    .layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px auto 1fr auto;
+
+        grid-template-areas:
+            "header"
+            "menu"
+            "content"
+            "footer";
+
+        width: 100%;
+    }
+
+    .menu {
+        padding: 10px;
+    }
+
+    .flex-menu {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .flex-menu li {
+        flex: 1;
+        text-align: center;
+    }
+
+    .flex-menu a {
+        display: block;
+        padding: 10px 5px;
+        font-size: 12px;
+    }
+
+    .content > * {
+        min-width: 0;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .publicacion {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .publicacion img {
+        width: 100%;
+        max-width: 100%;
+        display: block;
+    }
+    
+    .descripcion {
+        padding: 10px;
+    }
+
+    .descripcion h3 {
+        font-size: 20px;
+        padding-top: 20px;
+    }
+
+    .descripcion p {
+        font-size: 15px;
+    }
+
+    .descripcion h4 {
+        font-size: 16px;
+        margin-top: 35px;
+    }
+
+    .botones {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .boton,
+    .boton-dos {
+        font-size: 12px;
+        padding: 8px;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 1400px) {
+
+}
+
+@media (max-width: 660px) {
+
+}
+
+@media (max-width: 400px) {
+    
 }
