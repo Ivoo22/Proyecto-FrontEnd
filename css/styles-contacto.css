@@ -10,15 +10,16 @@ html {
 
 .layout {
     display: grid;
-    grid-template-columns: 350px 1fr;
-    grid-template-rows: 80px 1fr auto;
-    
-    grid-template-areas: 
-    "menu header"
-    "content content"
-    "footer footer";
-    
-    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px auto 1fr auto;
+
+    grid-template-areas:
+        "header"
+        "menu"
+        "content"
+        "footer";
+
+    width: 100%;
 }
 
 .header{
@@ -31,17 +32,17 @@ html {
     gap: 15px;
 }
 
-.header img{
+.logo img{
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
-    
+
     width: 200px;
     height: 100px;
     object-fit: cover;
 }
 
-.header svg:hover {
+.header-icon svg:hover {
     background: #ffb3c1;
     transform: scale(1.1);
     box-shadow: 0 6px 25px rgba(255, 179, 193, 0.9);
@@ -51,7 +52,7 @@ html {
 .menu {
     grid-area: menu;
     background: white;
-    padding: 20px;
+    padding: 10px;
 }
 
 .content {
@@ -82,8 +83,58 @@ html {
     margin: 0 auto;
 }
 
+.informacion {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 50%;
+}
+
+.informacion h4 {
+    font-family: "Comic Neue", cursive;
+    margin-bottom: 2px;
+    padding-left: 3px;
+}
+
+.informacion p {
+    font-size: 14px;
+    font-family: "Comic Neue", cursive;
+    padding-left: 3px;
+}
+
+.informacion iframe {
+    width: 75%;
+    height: 200px;
+    border-radius: 15px;
+
+    border: 2px solid #333;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.item-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+}
+
+.item-info:hover {
+    transform: translateX(5px);
+    transition: 0.2s;
+}
+
+.item-info i {
+    font-size: 15px;
+}
+
+.item-info p {
+    font-size: 13px;
+}
+
 .formulario {
     width: 50%;
+    margin-right: 15px;
 }
 
 .formulario h4 {
@@ -134,55 +185,11 @@ html {
     box-shadow: 0 6px 25px rgba(255, 179, 193, 0.9);
 }
 
-
-.informacion {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 50%;
-}
-
-.informacion h4 {
-    font-family: "Comic Neue", cursive;
-    margin-bottom: 2px;
-    padding-left: 3px;
-}
-
-.informacion iframe {
-    width: 75%;
-    height: 200px;
-    border-radius: 15px;
-
-    border: 2px solid #333;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.informacion p {
-    font-family: "Comic Neue", cursive;
-    padding-left: 3px;
-}
-
-.item-info {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 15px;
-}
-
-.item-info:hover {
-    transform: translateX(5px);
-    transition: 0.2s;
-}
-
-.item-info svg {
-    min-width: 24px;
-}
-
 .footer {
     grid-area: footer;
     background: white;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     padding: 30px 60px;
     text-align: center;
@@ -235,8 +242,10 @@ html {
 
 .menu-lista a {
     padding: 5px;
+    gap: 5px;
     text-decoration: none;
     color: black;
+    font-size: 13px;
 }
 
 .menu-lista a:hover {
@@ -251,27 +260,16 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    /* gap: 8px; */
+    gap: 2px;
+    padding: 5px;
 }
 
 .item-informacion p {
     font-family: "Comic Neue", cursive;
+    /* font-size: 14px; */
+    text-align: center;
     font-size: 13px;
-}
-
-.metodos-de-pago {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.metodos-de-pago h3 {
-    width: 100%;
-}
-
-.metodos-de-pago img {
-    width: auto;
-    max-height: 25px;
-    margin: 2px;
 }
 
 .redes-sociales {
@@ -286,4 +284,178 @@ html {
 
 .redes-sociales i:hover {
     transform: scale(1.2);
+}
+
+@media (min-width: 1400px) {
+    .layout {
+        grid-template-columns: 350px 1fr;
+        grid-template-rows: 80px 1fr auto;
+
+        grid-template-areas: 
+            "menu header"
+            "content content"
+            "footer footer";
+        
+        height: 100vh;
+    }
+
+    .menu {
+        padding: 20px;
+    }
+
+    .informacion {
+        margin-left: 0;
+    }
+
+    .informacion h4 {
+        font-size: 20px;
+    }
+
+    .informacion p {
+        font-size: 18px;
+    }
+
+    .item-info i {
+        font-size: 20px;
+    }
+
+    .item-info p {
+        font-size: 18px;
+    }
+
+    .formulario {
+        margin-right: 0;
+    }
+
+    .formulario h4 {
+        font-size: 20px;
+    }
+
+    .footer h3 {
+        font-size: 20px;
+    }
+
+    .flex-menu {
+        gap: 5px;
+    }
+
+    .flex-menu a {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .menu-lista a {
+        font-size: 16px;
+    }
+
+    .item-informacion {
+        gap: 8px;
+    }
+
+    .item-informacion p {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1399px) {
+
+    .footer h3 {
+        font-size: 18px;
+    }
+
+    .menu-lista a {
+        font-size: 16px;
+    }
+
+    .item-informacion {
+        gap: 8px;
+    }
+
+    .item-informacion p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 570px) {
+    .layout {
+        display: flex;
+        flex-direction: column;
+
+        min-height: 100vh;
+        width: 100%;
+    }
+
+    .header {
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+    }
+
+    .logo img {
+        position: static;
+        transform: none;
+        width: 130px;
+        height: auto;
+    }
+
+    .header-icon {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .header-icons svg {
+        width: 26px;
+        height: 26px;
+    }
+
+    .contacto-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 0 20px;
+    }
+
+    .informacion, .formulario {
+        width: 100%;
+        margin: 0;
+    }
+
+    .informacion iframe {
+        width: 100%;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .footer h3 {
+        font-size: 17px;
+    }
+
+    .cat,.info,.redes-sociales {
+        flex: 1;
+        min-width: 200px;
+    }
+
+    .menu-lista {
+        display: flex;
+        flex-direction: row;
+        gap: 2px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-lista li {
+        margin-bottom: 0;
+    }
+
+    
+    .menu-lista a {
+        font-size: 14px;
+    }
+
 }
