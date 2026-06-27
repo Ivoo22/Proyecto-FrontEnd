@@ -24,21 +24,39 @@
                 </a>
                 
                 <div class="header-icon">
-                    <a href="#"><svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="36"
-                        height="36"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="#000000" 
-                        stroke-width="1"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    >
-                        <path d="M4 7l.867 12.143a2 2 0 0 0 2 1.857h10.276a2 2 0 0 0 2 -1.857l.867 -12.143h-16z" />
-                        <path d="M8.5 7c0 -1.653 1.5 -4 3.5 -4s3.5 2.347 3.5 4" />
-                        <path d="M9.5 17c.413 .462 1 1 2.5 1s2.5 -.897 2.5 -2s-1 -1.5 -2.5 -2s-2 -1.47 -2 -2c0 -1.104 1 -2 2 -2s1.5 0 2.5 1" />
-                    </svg></a>
+                    <div id="carritoIcono" class="carrito-icono">
+                        <span id="contadorCarrito" class="contador">0</span>
+
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="36"
+                            height="36"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="#000000" 
+                            stroke-width="1"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path d="M4 7l.867 12.143a2 2 0 0 0 2 1.857h10.276a2 2 0 0 0 2 -1.857l.867 -12.143h-16z" />
+                            <path d="M8.5 7c0 -1.653 1.5 -4 3.5 -4s3.5 2.347 3.5 4" />
+                            <path d="M9.5 17c.413 .462 1 1 2.5 1s2.5 -.897 2.5 -2s-1 -1.5 -2.5 -2s-2 -1.47 -2 -2c0 -1.104 1 -2 2 -2s1.5 0 2.5 1" />
+                        </svg>
+                    </div>
+
+                    <div id="carritoMenu" class="carrito-menu">
+                        <h3>Carrito</h3>
+
+                        <table id="tablaCarrito">
+                            <thead>
+                                <th>Producto</th>
+                                <th>Precio</th>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+
+                        <h4 id="total">Total: $0</h4>
+                    </div>
 
                     <a href="#"><svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -73,78 +91,78 @@
                 
                 <div class="publicacion">
                     <img src="img/tabla pilates.webp">
-                    <div class="descripcion">
-                        <h3>Tabla de Pilates Profesional</h3>
+                    <div id="producto1" class="descripcion">
+                        <h3>Tabla de Pilates Profesional (Rosa)</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique nam maxime adipisci, quibusdam ipsa, iure eum culpa, illum deserunt et minus ullam quas fugit vel. Consequatur reiciendis eaque laboriosam rem veritatis. Odit sunt alias, incidunt cum est corporis sapiente vero similique explicabo eum ab. Velit enim natus quo reprehenderit aut aliquam sed in? Nesciunt velit voluptates blanditiis porro, repellat sed deleniti laudantium architecto quidem aut soluta dignissimos distinctio assumenda accusantium temporibus quos illum. Culpa pariatur ea ad iste ex? Minima saepe rerum esse, cum ad ipsam omnis blanditiis, soluta quia eaque maiores id necessitatibus ipsum suscipit, dolore voluptatem nobis?</p>
                         <h4>Precio: $180.000,00</h4>
                         <div class="botones">
-                            <a href="#" class="boton">Más Información</a>
-                            <a href="#" class="boton-dos">Agregar al Carrito</a>
+                            <button class="boton">Más Información</button>
+                            <button id="btnAgregar" class="boton-dos">Agregar al Carrito</button>
                         </div>
                     </div>
                 </div>
                 
-                <div class="publicacion">
+                <div id="producto2" class="publicacion">
                     <img src="img/tabla de pilates 2webp.webp">
                     <div class="descripcion">
-                        <h3>Tabla de Pilates Profesional</h3>
+                        <h3>Tabla de Pilates Profesional (Violeta)</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique nam maxime adipisci, quibusdam ipsa, iure eum culpa, illum deserunt et minus ullam quas fugit vel. Consequatur reiciendis eaque laboriosam rem veritatis. Odit sunt alias, incidunt cum est corporis sapiente vero similique explicabo eum ab. Velit enim natus quo reprehenderit aut aliquam sed in? Nesciunt velit voluptates blanditiis porro, repellat sed deleniti laudantium architecto quidem aut soluta dignissimos distinctio assumenda accusantium temporibus quos illum. Culpa pariatur ea ad iste ex? Minima saepe rerum esse, cum ad ipsam omnis blanditiis, soluta quia eaque maiores id necessitatibus ipsum suscipit, dolore voluptatem nobis?</p>
                         <h4>Precio: $230.000,00</h4>
                         <div class="botones">
-                            <a href="#" class="boton">Más Información</a>
-                            <a href="#" class="boton-dos">Agregar al Carrito</a>
+                            <button class="boton">Más Información</button>
+                            <button id="btnAgregar" class="boton-dos">Agregar al Carrito</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="publicacion">
                     <img src="img/tabla pilates 5.jpg">
-                    <div class="descripcion">
-                        <h3>Tabla de Pilates Profesional</h3>
+                    <div id="producto3" class="descripcion">
+                        <h3>Tabla de Pilates Profesional (Celeste)</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique nam maxime adipisci, quibusdam ipsa, iure eum culpa, illum deserunt et minus ullam quas fugit vel. Consequatur reiciendis eaque laboriosam rem veritatis. Odit sunt alias, incidunt cum est corporis sapiente vero similique explicabo eum ab. Velit enim natus quo reprehenderit aut aliquam sed in? Nesciunt velit voluptates blanditiis porro, repellat sed deleniti laudantium architecto quidem aut soluta dignissimos distinctio assumenda accusantium temporibus quos illum. Culpa pariatur ea ad iste ex? Minima saepe rerum esse, cum ad ipsam omnis blanditiis, soluta quia eaque maiores id necessitatibus ipsum suscipit, dolore voluptatem nobis?</p>
                         <h4>Precio: $200.000,00</h4>
                         <div class="botones">
-                            <a href="#" class="boton">Más Información</a>
-                            <a href="#" class="boton-dos">Agregar al Carrito</a>
+                            <button class="boton">Más Información</button>
+                            <button id="btnAgregar" class="boton-dos">Agregar al Carrito</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="publicacion">
                     <img src="img/tabla pilates 4.jpg">
-                    <div class="descripcion">
-                        <h3>Tabla de Pilates Profesional</h3>
+                    <div id="producto4" class="descripcion">
+                        <h3>Tabla de Pilates Profesional (Negra)</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique nam maxime adipisci, quibusdam ipsa, iure eum culpa, illum deserunt et minus ullam quas fugit vel. Consequatur reiciendis eaque laboriosam rem veritatis. Odit sunt alias, incidunt cum est corporis sapiente vero similique explicabo eum ab. Velit enim natus quo reprehenderit aut aliquam sed in? Nesciunt velit voluptates blanditiis porro, repellat sed deleniti laudantium architecto quidem aut soluta dignissimos distinctio assumenda accusantium temporibus quos illum. Culpa pariatur ea ad iste ex? Minima saepe rerum esse, cum ad ipsam omnis blanditiis, soluta quia eaque maiores id necessitatibus ipsum suscipit, dolore voluptatem nobis?</p>
                         <h4>Precio: $190.000,00</h4>
                         <div class="botones">
-                            <a href="#" class="boton">Más Información</a>
-                            <a href="#" class="boton-dos">Agregar al Carrito</a>
+                            <button class="boton">Más Información</button>
+                            <button id="btnAgregar" class="boton-dos">Agregar al Carrito</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="publicacion">
                     <img src="img/tabla pilates 3.webp">
-                    <div class="descripcion">
-                        <h3>Tabla de Pilates Profesional</h3>
+                    <div id="producto5" class="descripcion">
+                        <h3>Tabla de Pilates Profesional (Verde)</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique nam maxime adipisci, quibusdam ipsa, iure eum culpa, illum deserunt et minus ullam quas fugit vel. Consequatur reiciendis eaque laboriosam rem veritatis. Odit sunt alias, incidunt cum est corporis sapiente vero similique explicabo eum ab. Velit enim natus quo reprehenderit aut aliquam sed in? Nesciunt velit voluptates blanditiis porro, repellat sed deleniti laudantium architecto quidem aut soluta dignissimos distinctio assumenda accusantium temporibus quos illum. Culpa pariatur ea ad iste ex? Minima saepe rerum esse, cum ad ipsam omnis blanditiis, soluta quia eaque maiores id necessitatibus ipsum suscipit, dolore voluptatem nobis?</p>
                         <h4>Precio: $250.000,00</h4>
                         <div class="botones">
-                            <a href="#" class="boton">Más Información</a>
-                            <a href="#" class="boton-dos">Agregar al Carrito</a>
+                            <button class="boton">Más Información</button>
+                            <button id="btnAgregar" class="boton-dos">Agregar al Carrito</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="publicacion">
                     <img src="img/tabla-pilates-6 (1).jpeg">
-                    <div class="descripcion">
-                        <h3>Tabla de Pilates Profesional</h3>
+                    <div id="producto6" class="descripcion">
+                        <h3>Tabla de Pilates Profesional (Beige)</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique nam maxime adipisci, quibusdam ipsa, iure eum culpa, illum deserunt et minus ullam quas fugit vel. Consequatur reiciendis eaque laboriosam rem veritatis. Odit sunt alias, incidunt cum est corporis sapiente vero similique explicabo eum ab. Velit enim natus quo reprehenderit aut aliquam sed in? Nesciunt velit voluptates blanditiis porro, repellat sed deleniti laudantium architecto quidem aut soluta dignissimos distinctio assumenda accusantium temporibus quos illum. Culpa pariatur ea ad iste ex? Minima saepe rerum esse, cum ad ipsam omnis blanditiis, soluta quia eaque maiores id necessitatibus ipsum suscipit, dolore voluptatem nobis?</p>
                         <h4>Precio: $260.000,00</h4>
                         <div class="botones">
-                            <a href="#" class="boton">Más Información</a>
-                            <a href="#" class="boton-dos">Agregar al Carrito</a>
+                            <button class="boton">Más Información</button>
+                            <button id="btnAgregar" class="boton-dos">Agregar al Carrito</button>
                         </div>
                     </div>
                 </div>
@@ -187,6 +205,6 @@
             </footer>
         </div>
 
-        <script src="js/script.js"></script>
+        <script src="js/script-prod.js"></script>
     </body>
 </html>
